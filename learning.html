@@ -2,18 +2,12 @@
 <html>
 
 <head>
-    <!-- Recommended meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- PyScript CSS -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <!-- CSS for examples -->
     <link rel="stylesheet" href="./assets/css/examples.css" />
-    <!-- Your original CSS -->
     <link rel="stylesheet" href="/assets/style.css">
-    <!-- This script tag bootstraps PyScript -->
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-    <!-- for splashscreen -->
     <style>
         #loading {
             outline: none;
@@ -27,7 +21,6 @@
         loading.showModal();
     </script>
     <title>Learning - PyScript</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
 </head>
 
 <body>
@@ -50,6 +43,46 @@
             <h1>Learning</h1>
             <p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way
                 that I think is useful.</p>
+            <ol>
+                <li>Installing HOOMD-Blue</li>
+                <li>Molecular Dynamics in a Nutshell</li>
+                <ul>
+                    <li>What is MD?</li>
+                    <li>Particles and Interactions</li>
+                    <li>Periodic Boundaries</li>
+                    <li>Units</li>
+                    <li>Ensembles (Thermostats and Barostats)</li>
+                </ul>
+                <li>Visualizing MD: Ovito</li>
+                <ul>
+                    <li>Pythonic OVITO</li>
+                    <li>Simulation to 3D Printable Object</li>
+                </ul>
+                <li>Hello World of MD Simulation: Gaussian Chain</li>
+                <ul>
+                    <li>Initializing the Chain</li>
+                    <li>Simulating the Chain</li>
+                    <li>Analyzing the Chain</li>
+                    <ul>
+                        <li>Equilibration Time</li>
+                        <li>Radius of Gyration</li>
+                        <li>End-to-End Distance</li>
+                        <li>Validating Simulations with Theory</li>
+                        <li>Mean Squared Displacement </li>
+                    </ul>
+                    <li>(My) Introduction to Martini 3</li>
+                    <li>Hello World of Martini Simulations: Lipid Bilayer</li>
+                    <ul>
+                        <li>Initializing the Membrane</li>
+                        <li>Simulating the Membrane</li>
+                        <li>Analyzing the Membrane: Thickness, Order</li>
+                    </ul>
+
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ol>
 
             <h2>PyScript Demo - Current Date and Time:</h2>
             <p>This is the current date and time, as computed by Python:</p>
