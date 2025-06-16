@@ -9,6 +9,7 @@ This is my guide for getting up to speed on MD simulations of lipid membranes wi
 ---
 Try typing your name and clicking the button below:
 
+{% raw %}
 <py-script>
 def greet(name):
     return f"Hello, {name}!"
@@ -17,10 +18,9 @@ def update():
     name = Element("name").value
     greeting = greet(name)
     Element("output").element.innerText = greeting
-</py-script>
+
 
 <input id="name" type="text" placeholder="Your name" />
 <button py-click="update()">Greet</button>
 <p id="output"></p>
-
-
+{% endraw %}
