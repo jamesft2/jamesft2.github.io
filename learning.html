@@ -3,13 +3,23 @@ layout: default
 title: Learning
 ---
 
-<h1>Learning</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning</title>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
 
-<p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way that I think is useful.</p>
+  <h1>Learning</h1>
 
-<h2>Try typing your name and clicking the button below:</h2>
+  <p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way that I think is useful.</p>
 
-<py-script>
+  <h2>Try typing your name and clicking the button below:</h2>
+
+  <py-script>
 def greet(name):
     return f"Hello, {name}!"
 
@@ -17,9 +27,12 @@ def update():
     name = Element("name").value
     greeting = greet(name)
     Element("output").element.innerText = greeting
-</py-script>
+  </py-script>
 
-<input id="name" type="text" placeholder="Your name" />
-<button py-click="update()">Greet</button>
-<p id="output"></p>
+  <input id="name" type="text" placeholder="Your name" />
+  <button py-click="update()">Greet</button>
+  <p id="output"></p>
+
+</body>
+</html>
 
