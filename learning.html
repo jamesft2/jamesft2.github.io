@@ -1,47 +1,39 @@
+---
+layout: null
+title: Learning
+---
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Learning</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <meta charset="utf-8">
+  <title>Learning</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.4.1/pyscript.css" />
+  <script defer src="https://pyscript.net/releases/2024.4.1/pyscript.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="/">My Site</a></h1>
-        <nav>
-            <a href="/learning">Learning</a>
-            <a href="/scripts">Scripts</a>
-            <a href="/teaching">Teaching</a>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>Learning</h1>
-        <p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way that I think is useful.</p>
-        
-        <h2>Try typing your name and clicking the button below:</h2>
-        
-        <py-script>
-from pyscript import Element
 
+  <h1>Learning</h1>
+
+  <p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way that I think is useful.</p>
+
+  <h2>Try typing your name and clicking the button below:</h2>
+
+  <py-script>
 def greet(name):
     return f"Hello, {name}!"
 
 def update():
     name = Element("name").value
     greeting = greet(name)
-    Element("output").write(greeting)
-        </py-script>
-        
-        <input id="name" type="text" placeholder="Your name" />
-        <button py-click="update()">Greet</button>
-        <p id="output"></p>
-    </main>
-    
-    <footer>
-        <p>© 2025 James Tallman</p>
-    </footer>
+    Element("output").element.innerText = greeting
+  </py-script>
+
+  <input id="name" type="text" placeholder="Your name" />
+  <button py-click="update()">Greet</button>
+  <p id="output"></p>
+
 </body>
 </html>
+
