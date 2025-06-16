@@ -68,70 +68,108 @@
                         <li>Radius of Gyration</li>
                         <li>End-to-End Distance</li>
                         <li>Validating Simulations with Theory</li>
-                        <li>Mean Squared Displacement </li>
                     </ul>
-                    <li>(My) Introduction to Martini 3</li>
-                    <li>Hello World of Martini Simulations: Lipid Bilayer</li>
+                </ul>
+                <li>(My) Introduction to Martini 3</li>
+                <li>Hello World of Martini Simulations: Lipid Bilayer</li>
+                <ul>
+                    <li>Initializing the Membrane</li>
+                    <li>FIRE Energy Minimization</li>
+                    <li>Simulating the Membrane</li>
+                    <li>Analyzing the Membrane</li>
                     <ul>
-                        <li>Initializing the Membrane</li>
-                        <li>Simulating the Membrane</li>
-                        <li>Analyzing the Membrane: Thickness, Order</li>
+                        <li>Equilibration Time</li>
+                        <li>Thickness</li>
+                        <li>Area per Lipid</li>
+                        <li>Order Parameter</li>
                     </ul>
+                </ul>
+                <li>Using the Cluster</li>
+                <li>Rigid Bodies: Cholesterol</li>
+                <li>Analysis Repository:</li>
+                <ul>
+                    <li>Dynamic quanties:</li>
+                    <ul>
+                        <li>Mean Squared Displacement</li>
+                        <li>Velocity Autocorrelation Function</li>
+                        <li>Van Hove Correlation Functions</li>
+                    </ul>
+                    <li>Membrane Quantities</li>
+                    <ul>
+                        <li>The pressure profile</li>
+                        <li>Stretching Modulus</li>
+                        <ul>
+                            <li>From Pressure Profile</li>
+                            <li>From Box Fluctuations</li>
+                            <li>From Simulated Micropipette Aspiration</li>
+                        </ul>
+                        <li>Bending Modulus</li>
+                        <ul>
+                            <li>From Pressure Profile</li>
+                            <li>From Splay-Tilt Method</li>
+                            <li>From fluctuation Analysis</li>
+                        </ul>
+                        <li>Thickness</li>
+                        <li>Order Parameter</li>
+                        <li>Area per Lipid</li>
+                    </ul>
+                    <li>Local Quantities</li>
+                    <ul>
+                        <li>Local Area per Lipid</li>
+                        <li>Local Density/Composition</li>
+                        <li>Local Thickness</li>
+                        <li>Local Nematic Order</li>
+                        <li>Local Surface Area</li>
+                        <li>Binned MSD</li>
+                        <li>Steinhart Order Parameter</li>
+                    </ul>
+                    <li>Mesh Based Quantities</li>
+                    <ul>
+                        <li>Constructing the Mesh</li>
+                        <li>Euler Characteristic</li>
+                        <li>Geodesic Distances</li>
+                        <li>Local Surface Area</li>
+                        <li>Local Mean Curvature</li>
+                        <li>Local Gaussian Curvature</li>
+                        <li>Euler Characteristic from Local Quantities</li>
+                    </ul>
+                    <li>Radial Distribution Function and Structure Factor</li>
+                </ul>
+                <li>Plotting Publication Quality Figures</li>
+                <li>Simulating Curved Membranes with Anchored Frozen Patches</li>
+                <li>Triply Periodic Minimal Surfaces</li>
+                <ul>
+                    <li>
+                        <ul>
+                            <li>Constructing the surface (math and cool links)</li>
+                            <li>Facets and Supercells</li>
+                        </ul>
+                    </li>
+                    <li>Simulating via ghost particles</li>
+                    <li>Simulating via initalizing near determined structure</li>
+                    <li>Computing Energies with Thermodynamic Integration</li>
 
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                </ul>
+                <li>Sequence defined macromolecules</li>
+                <ul>
+                    <li>Initializing Sequence Defined Macromolecules</li>
+                    <ul>
+                        <li>A better way of 'building' polymers (than my Martini implementation)</li>
+                        <li>Random walks and hilbert curves</li>
+                    </ul>
+                    <li>Example workflows</li>
+                </ul>
+                <li>Misc Other</li>
+                <ul>
+                    <li>Turning images/3D objects into simulations</li>
+                    <li>Turning simulations to 3D objects</li>
+
+                </ul>
+
+
             </ol>
-
-            <h2>PyScript Demo - Current Date and Time:</h2>
-            <p>This is the current date and time, as computed by Python:</p>
-            <script type="py">
-                from pyscript import display
-                from datetime import datetime
-                now = datetime.now()
-                display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-            </script>
-
-            <h2>Try typing your name and clicking the button below:</h2>
-
-            <input id="name" type="text" placeholder="Your name" />
-            <button id="greet-btn">Greet</button>
-            <p id="output"></p>
-
-            <script type="py">
-                from pyscript import when, display, document
-                
-                def greet(name):
-                    return f"Hello, {name}!"
-                
-                @when("click", "#greet-btn")
-                def update(event):
-                    name = document.querySelector("#name").value
-                    greeting = greet(name)
-                    output = document.querySelector("#output")
-                    output.innerText = greeting
-            </script>
-
-            <script type="py">
-                from pyscript import when, display, document
-                
-                def greet(name):
-                    return f"Hello, {name}!"
-                
-                @when("click", "#greet-btn")
-                def update(event):
-                    name = document.querySelector("#name").value
-                    greeting = greet(name)
-                    output = document.querySelector("#output")
-                    output.innerText = greeting
-            </script>
-
         </section>
-        <section class="pyscript">
-            <div id="mpl"></div>
-            <script type="py" src="./visualizations/examples.py" config="./visualizations/pyscript.toml"></script>
-        </section>
+
     </main>
 
     <footer>
