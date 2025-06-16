@@ -68,16 +68,17 @@
             <p id="output"></p>
             
             <script type="py">
-                from pyscript import when, display, Element
+                from pyscript import when, display, document
                 
                 def greet(name):
                     return f"Hello, {name}!"
                 
                 @when("click", "#greet-btn")
                 def update(event):
-                    name = Element("name").value
+                    name = document.querySelector("#name").value
                     greeting = greet(name)
-                    Element("output").write(greeting)
+                    output = document.querySelector("#output")
+                    output.innerText = greeting
             </script>
         </section>
     </main>
