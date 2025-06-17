@@ -35,6 +35,11 @@
             and temperature (NPT).
             There are other elements you might also want to control which give rise to other ensembles (NPH, NVE, etc.)
         </p>
+        <h3>Thermostats and Barostats</h3>
+        <p>
+            Nose-Hoover = MTTK ==> This is the thermostat I usually use.
+            Constant Pressure ==> Brenderson Barostat
+        </p>
         <h2>Units</h2>
         <p>The units of the simulation are based off the arbitrary decisions of the energy scale (set by the pair
             potential) and the mass of the particles.
@@ -45,11 +50,46 @@
             chain length)
         </p>
 
+        <h2>Particles and Interactions</h2>
+        <p>
+            MD simulations are particle based simulations. This means they are fundementally different than other
+            continuum level simulation tools and DFT.
+            Some Monte Carlo methods and MPCD Solvent methods are also particle based.
+        </p>
+        <p>
+            Thus, the largest input parameter to an MD simulation is what are the particles and how do they interact
+            with eachother. These interactions are highly dependent on the system being modeled (and the relevant length
+            scale).
+            A set of interactions is refered to as a 'force field'.
+        </p>
+        <p>
+            There are two main classes of interactions: Specific and Pair Interactions.
 
+            Pair interactions act between all pairs of particles in the system, typically modeling van der Waals,
+            electrostatics, hard core repulsion, etc.
+
+            Specific interactions are used to model chemical or physical interactions which exist due to specific
+            mechanisms not modeled at a given resolution.
+            For example, chemical bonds, bond angles, and dihedral angles all represent features which are not modeled
+            by these particles (but do exist for real atoms), just need to be modeled.
+
+            https://hoomd-blue.readthedocs.io/en/latest/hoomd/md/module-pair.html
+            https://hoomd-blue.readthedocs.io/en/latest/hoomd/md/module-bond.html
+        </p>
+        <h2>Periodic Boundaries</h2>
+        <p>
+            The simulation box has one unique property -- it is periodic in all directions. It can have any shape, but
+            it will always wrap, such that a particle that leaves the right side of the box will re-enter on the left.
+            As a rule of thumb, the box should be larger than 5 times the size of the largest element of the simulation
+            (i.e. 5 times the radius of gyration of a polymer, 5 times the thickness of a membrane, etc). This runs into
+            issues with things like gels which do span the entire box, and the 'Finite Size' of the system should
+            usually be tested.
+        </p>
         <h2>MD Textbooks</h2>
         <p>Allen and Tildesley is a rich textbook on many of the fundemental algorithms and MD concepts (but is very
             dense)</p>
         <p>Frenkel and Smit is supposedly also good.</p>
+
 
 
     </main>
