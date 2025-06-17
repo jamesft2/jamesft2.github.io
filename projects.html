@@ -1,20 +1,19 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <link rel="stylesheet" href="./assets/css/examples.css" />
-    <link rel="stylesheet" href="/assets/style.css">
-    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-
-    <title>Accumulated projects from my PhD and the corresponding code/analysis</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <link href="https://pyscript.net/releases/2024.1.1/core.css" rel="stylesheet" />
+    <link href="./assets/css/examples.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet" />
+    <script src="https://pyscript.net/releases/2024.1.1/core.js" type="module"></script>
+    <title>Accumulated projects from my PhD and the corresponding</title>
+    </link>
 </head>
 
 <body>
-
-
     <header>
         <h1><a href="/">My Site</a></h1>
         <nav>
@@ -22,37 +21,40 @@
             <a href="/thoughts">Thoughts</a>
         </nav>
     </header>
-
     <main>
         <section class="pyscript">
             <h1>Learning</h1>
             <p>This is my guide for getting up to speed on MD simulations of lipid membranes with HOOMD-blue in a way
                 that I think is useful.</p>
             <ol>
-                <li>Installing HOOMD-Blue</li>
-                <li>Molecular Dynamics in a Nutshell</li>
+                <li><a href="/learning/hoomd-installation.html">Installing HOOMD-Blue</a></li>
+                <li><a href="/learning/md-nutshell.html">Molecular Dynamics in a Nutshell</a></li>
                 <ul>
-                    <li>What is MD?</li>
-                    <li>Particles and Interactions</li>
-                    <li>Periodic Boundaries</li>
-                    <li>Units</li>
-                    <li>Ensembles (Thermostats and Barostats)</li>
+                    <li><a href="/learning/md-nutshell.html#what-is-md">What is MD?</a></li>
+                    <li><a href="/learning/md-nutshell.html#particles">Particles and Interactions</a></li>
+                    <li><a href="/learning/md-nutshell.html#boundaries">Periodic Boundaries</a></li>
+                    <li><a href="/learning/md-nutshell.html#units">Units</a></li>
+                    <li><a href="/learning/md-nutshell.html#ensembles">Ensembles (Thermostats and Barostats)</a></li>
                 </ul>
-                <li>Visualizing MD: Ovito</li>
+                <li><a href="/learning/ovito-visualization.html">Visualizing MD: Ovito</a></li>
                 <ul>
-                    <li>Pythonic OVITO</li>
-                    <li>Simulation to 3D Printable Object</li>
+                    <li><a href="/learning/ovito-visualization.html#pythonic">Pythonic OVITO</a></li>
+                    <li><a href="/learning/ovito-visualization.html#3dprint">Simulation to 3D Printable Object</a></li>
                 </ul>
-                <li>Hello World of MD Simulation: Gaussian Chain</li>
+                <li><a href="/learning/gaussian-chain/">Hello World of MD Simulation: Gaussian Chain</a></li>
                 <ul>
-                    <li>Initializing the Chain</li>
-                    <li>Simulating the Chain</li>
-                    <li>Analyzing the Chain</li>
+                    <li><a href="/learning/gaussian-chain/initializing.html">Initializing the Chain</a></li>
+                    <li><a href="/learning/gaussian-chain/simulating.html">Simulating the Chain</a></li>
+                    <li><a href="/learning/gaussian-chain/analyzing.html">Analyzing the Chain</a></li>
                     <ul>
-                        <li>Equilibration Time</li>
-                        <li>Radius of Gyration</li>
-                        <li>End-to-End Distance</li>
-                        <li>Validating Simulations with Theory</li>
+                        <li><a href="/learning/gaussian-chain/theory-validation.html#equilibration">Equilibration
+                                Time</a></li>
+                        <li><a href="/learning/gaussian-chain/theory-validation.html#gyration">Radius of Gyration</a>
+                        </li>
+                        <li><a href="/learning/gaussian-chain/theory-validation.html#end-to-end">End-to-End Distance</a>
+                        </li>
+                        <li><a href="/learning/gaussian-chain/theory-validation.html#validation">Validating Simulations
+                                with Theory</a></li>
                     </ul>
                 </ul>
                 <li>(My) Introduction to Martini 3</li>
@@ -63,7 +65,8 @@
                     <li>Simulating the Membrane</li>
                     <li>Analyzing the Membrane</li>
                     <ul>
-                        <li>Equilibration Time</li>
+                        <li><a href="/learning/gaussian-chain/theory-validation.html#equilibration">Equilibration
+                                Time</a></li>
                         <li>Thickness</li>
                         <li>Area per Lipid</li>
                         <li>Order Parameter</li>
@@ -71,7 +74,7 @@
                 </ul>
                 <li>Using the Cluster</li>
                 <li>Rigid Bodies: Cholesterol</li>
-                <li>Analysis Repository:</li>
+                <li><a href="/learning/analysis/">Analysis Repository:</a></li>
                 <ul>
                     <li>Dynamic quanties:</li>
                     <ul>
@@ -138,7 +141,6 @@
                     <li>Simulating via ghost particles</li>
                     <li>Simulating via initalizing near determined structure</li>
                     <li>Computing Energies with Thermodynamic Integration</li>
-
                 </ul>
                 <li>Sequence defined macromolecules</li>
                 <ul>
@@ -153,20 +155,10 @@
                 <ul>
                     <li>Turning images/3D objects into simulations</li>
                     <li>Turning simulations to 3D objects</li>
-                    <li>Making Posters:</li>
-                    <ul>
-                        <li>Indesign Template and Notes</li>
-                        <li>PowerPoint Template and Notes</li>
-                    </ul>
-
                 </ul>
-
-
             </ol>
         </section>
-
     </main>
-
     <footer>
         <p>© 2025 James Tallman</p>
     </footer>
