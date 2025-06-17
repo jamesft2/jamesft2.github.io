@@ -53,9 +53,34 @@
         <p>Handy</p>
         <h2>Clear selection</h2>
         <p>Also Handy</p>
+        <h2>Making particles transparent</h2>
+        <img src="/ovito_images/transparency.png" width="400"></img>
+        <p>Compute property modifier -> Output Property: Transparency -> Value 1 = Transparent, 0 = Opaque. Can 'select
+            compute only for selected element.'</p>
         <h2>Making a Surface Mesh</h2>
-        <p>A favorite tool of mine.</p>
-        <h2>Exporting a Surface Mesh</h2>
+        <p>There are two methods.
+
+            Alpha-shape method (which takes a sphere of size probe-shere radius) and tries to find
+            where the boundaries of where it can exist or didn't.
+
+            Gaussian density method (which depends on particle
+            size) treats each particle as a gaussian density and if the density at a given position is greater than the
+            threshold it is inside the surface. Find where the surface is by where the value is in the </p>
+        <img src="/ovito_images/mesh.png" width="400"></img>
+        <p>I prefer alpha shape method. The probe sphere size should be at minimum 1.1 times the particle radius. The
+            smoothing level changes t eh properties you are resol ving. I have used 1, 6, 10, 50, and 100 for various
+            applications</p>
+
+        <h2>Saving a .png or .pdf</h2>
+        <img src="/ovito_images/save_image.png" width="400"></img>
+        <p>Click the camera button in the top right corner. Either select an output location (with selecting save to
+            file) or don't. Then select render active viewport. Either save the folder before hand or don't</p>
+
+        <h2>Saving a .gif</h2>
+        <p>Select Complete animation. Check save to file. Under choose -> select a filetype of either .mov or .gif.
+            Select render active viewport.</p>
+        <h2>Saving a surface mesh</h2>
+        When a surface mesh is in your pipeline, File -> Export -> select .vtk triangle mesh as the type.
 
         <h1>Pythonic Ovito</h1>
         <p>Some of these scripts are going to be redundant to the scripts which I am putting in the analysis module
