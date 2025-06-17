@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Md Nutshell</title>
     <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
     <header>
         <h1><a href="/">My Site</a></h1>
@@ -14,11 +16,46 @@
         </nav>
     </header>
     <main>
-        <h1>Md Nutshell</h1>
-        <p>Content coming soon.</p>
+        <h1>MD Nutshell</h1>
+        <p>Molecular dynamics (MD) is a simulation tool frequently used to understand both atomic and soft systems.</p>
+        <p>The core concept of MD is the following algorithms
+        <ul>
+            <li>Calculate the forces felt by each particle on each particle</li>
+            <li>Compute new positions based on the current forces and velocities (see Verlet algorithm)</li>
+            <li>Adjust the velocities such that they obey the thermostat</li>
+        </ul>
+
+        </p>
+        <h2>Ensembles</h2>
+        <p>
+            Ensembles are a way of saying what is controlled in the system.
+            If your simulation is modeling a closed system, you might say you control the number of particles, volume,
+            and temperature (NVT).
+            If your simulation is modeling an open system, you might say you control the number of particles, pressure,
+            and temperature (NPT).
+            There are other elements you might also want to control which give rise to other ensembles (NPH, NVE, etc.)
+        </p>
+        <h2>Units</h2>
+        <p>The units of the simulation are based off the arbitrary decisions of the energy scale (set by the pair
+            potential) and the mass of the particles.
+            Different 'force fields' (which describe the interactions between particles), will set different energy
+            scales. Sometimes, these scales correspond to real units (i.e. Martini )
+            Othertimes, they are arbirtrary and can be reported in reduced units (i.e. Gaussian chain). Then, the
+            effective time and length scales can be calculated by approximated with known properties (i.e. diffusion or
+            chain length)
+        </p>
+
+
+        <h2>MD Textbooks</h2>
+        <p>Allen and Tildesley is a rich textbook on many of the fundemental algorithms and MD concepts (but is very
+            dense)</p>
+        <p>Frenkel and Smit is supposedly also good.</p>
+
+
     </main>
     <footer>
         <p>© 2025 James Tallman</p>
     </footer>
 </body>
+
 </html>

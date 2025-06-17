@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hoomd Installation</title>
     <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
     <header>
         <h1><a href="/">My Site</a></h1>
@@ -15,10 +17,34 @@
     </header>
     <main>
         <h1>Hoomd Installation</h1>
-        <p>Content coming soon.</p>
+
+        <p>HOOMD-blue is the molecular dynamics software we primarily use in our group</p>
+        <p>Installing HOOMD
+            If you have a linux or mac computer, you can install the software on your computer with these instructions.
+            https://hoomd-blue.readthedocs.io/en/stable/installation.html</p>
+
+        <p>If you have a windows computer, you will need to either set up a virtual Ubuntu environment or dual boot your
+            computer to do this. The process to install wsl (a linux subsystem which lives on your computer) is
+            discussed here (and a few other places):
+            https://cs107e.github.io/guides/install/wsl-setup/
+        </p>
+        <h2>Other packages</h2>
+        <p>In your conda environment, also install (either now or when you need them):
+            pandas
+            numpy
+            matplotlib
+            seaborn
+            scikit-learn
+            scipy
+            ipykernel
+            gsd
+            ovito (sometimes this is finicky)
+            freud
+        </p>
     </main>
     <footer>
         <p>© 2025 James Tallman</p>
     </footer>
 </body>
+
 </html>
