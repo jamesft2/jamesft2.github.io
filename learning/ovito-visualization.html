@@ -27,20 +27,39 @@
 
         <h2>Opening a file</h2>
         <p>File -> Open -> select .gsd or .xyz file</p>
-        <img src='/ovito_images/opening_image.png' width="200"></img>
+        <img src='/ovito_images/opening_image.png' width="400"></img>
         <p>When you open an image, it might open with the particles being very large, like what is shown above. To fix
             this, you can select the option:</p>
         <img src="/ovito_images/scale_particles.png" width="200"></img>
         <p>I usually go to a radius scaling percentage of 20%.</p>
         <h2>Changing colors</h2>
+        <p>Select particle types -> Select type of interest -> choose color of your choice</p>
+        <img src="/ovito_images/coloring_particles.png" width="200"></img>
+        <h2>Using Modifiers</h2>
+        <p>Modifiers are how you can do any type of analysis or change the visualization. They are applied sequentially,
+            and can be grouped together and/or hidden.
+        </p>
         <h2>Expression Selection</h2>
+        <p>This selects particles to some commands.</p>
+        <p>Tricks I've learned: && and || to combine expressions. fmod(arg,2). </p>
         <h2>Expanding Selections</h2>
+        <p>Bonded to nearest neighbor + number of iterations is helpful</p>
         <h2>Changing Cross Sections</h2>
+        <img src="/ovito_images/affine.png" width="200"></img>
+        <p> To do this (say you want to show off a slightly different part of the box). First, select affine
+            transformation. Uncheck simulation box. Below translation, type the amount you want to shift the cell. Then,
+            select wrap at periodic boundary</p>
+        <h2>Delete selection</h2>
+        <p>Handy</p>
+        <h2>Clear selection</h2>
+        <p>Also Handy</p>
         <h2>Making a Surface Mesh</h2>
+        <p>A favorite tool of mine.</p>
         <h2>Exporting a Surface Mesh</h2>
 
         <h1>Pythonic Ovito</h1>
-        <p>Some of these scripts are going to be redundant to the scripts which I am putting in the analysis module</p>
+        <p>Some of these scripts are going to be redundant to the scripts which I am putting in the analysis module
+        </p>
         <h2>Rendering Scripts</h2>
         <h2>Mesh Scripts</h2>
         <h2>Mesh + Analysis Examples</h2>
