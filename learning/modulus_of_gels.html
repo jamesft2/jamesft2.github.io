@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Md Nutshell</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px;">
+    <header style="border: 2px solid #505050; padding: 20px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <nav style="display: inline;">
+            <a href="/projects" style="text-decoration: none; color: #007BFF; margin-right: 15px; font-weight: bold;">Back to Projects</a>
+        </nav>
+        <div style="display: inline; text-align: right; font-style: italic; margin-top: 10px; color: #666;">
+            <p style="display: inline; margin: 0;">Date: 1/18/2026</p>
+        </div>
+    </header>
+    <h1 style="color: #333; margin-top: 20px;">Modulus of Gels</h1>
+    <p style="line-height: 1.6; color: #444;">
+        I was developing a question about the modulus of gels as a function of the extent of reaction (and gel fraction) for the polymer physics class, 
+        namely because there lacked a good question on the polymer physics of rubbers, actually, but we did have a question on gels and I was trying to see if I could connect the two. 
+        We actually never got to section 7.4 when I took the class (and I never read this part of the textbook). This meant my approach to solving this problem was based on "effective strands" 
+        and not mean field scaling (well, it is mean field) or correlation lengths as R&C constructs the solution. 
+        But then I found section 7.4 and it offered a perspective of this problem through the lens of rubbers. As far as I can tell, both obtain the same result near the critical point, 
+        which makes this a really satisfying bridge between rubber theory and gelation theory. I am not sure if this whole discussion fits in the homework assignment (it doesn't, although I wish it did) but it was cool and as such I write it down.
+
+        BTW, I am taking some screenshots from R&C but will keep this to a minimum
+    </p>
+    <h2 style="color: #333; margin-top: 20px;">Mean Field Gelation Solution</h2>
+    <p style="line-height: 1.6; color: #444;">The mean field solution has a few assumptions (most of which fall from using a bethe lattice, i.e. no loops, not spacial correlations, etc).
+        The bethe lattice looks like this:
+    </p>
+        <img src="gel_plots/bethe.png" alt="Bethe Lattice">
+
+
+   
+</body> 
+</html>
