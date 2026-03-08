@@ -1,0 +1,240 @@
+---
+layout: default
+title: Home
+---
+
+<style>
+  /* --- Color Scheme & Base Typography --- */
+  :root {
+    --pale-green: #e6f0e6;
+    --dark-brown: #3e2723;
+    --text-brown: #4e342e;
+    --accent-color: #8d6e63;
+    --white: #ffffff;
+  }
+
+  body {
+    background-color: var(--pale-green);
+    color: var(--text-brown);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3 {
+    color: var(--dark-brown);
+  }
+
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--dark-brown);
+    text-decoration: underline;
+  }
+
+  /* --- Layout & Containers --- */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .nav-links {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+  .nav-links a {
+    margin: 0 15px;
+    font-size: 1.1rem;
+  }
+
+  /* --- Hero / About Section --- */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--pale-green);
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  /* --- Articles Section --- */
+  .articles-section {
+    margin-bottom: 4rem;
+  }
+
+  .teaching-section {
+    margin-bottom: 4rem;
+  }
+
+  .mentorship-outreach-section {
+    margin-bottom: 4rem;
+  }
+
+  .article-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .article-list li {
+    background: var(--white);
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  /* --- Gallery Section --- */
+  .gallery-section {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .gallery-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none; 
+  }
+  
+  .gallery-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .gallery-controls button {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .gallery-controls button:hover {
+    background-color: var(--accent-color);
+  }
+</style>
+
+<div class="container">
+  
+  <nav class="nav-links">
+    <a href="prewet.html">Pre-wet</a>
+    <a href="hybrids.html">Hybrid Lipid--Polymer Membranes</a>
+    <a href="cubosomes.html">Cubosomes</a>
+    <a href="methods.html">Methods</a>
+  </nav>
+
+  <section class="hero-section">
+    <img src="headshop.jpeg" alt="Headshot" class="headshot">
+    <div class="about-text">
+      <h1>James Tallman</h1>
+      <p>I am a third year PhD Student at the University of Illinois Urbana Champaign.</p>
+      <p> I work with Prof. Antonia Statt (<a href="https://statt.matse.illinois.edu/">Statt Lab</a>) using computational methods (mainly molecular dynamics simulations) to understand complex polymeric and biological systems. Our research focuses on the interactions between polymers and phospholipids, and understanding how fundemental physical models can describe complex systems.</p>
+        <p>Contact me:</p>
+        <ul>
+          <li>Email: <a href="mailto:jamesft2@illinois.edu">jamesft2@illinois.edu</a></li>
+          <li>Linkedin: <a href="https://www.linkedin.com/in/james-tallman-4526161b8/">LinkedIn Profile</a></li>
+          <!-- <li>Github: Placehold</li> -->
+           <li>Google Scholar: <a href="https://scholar.google.com/citations?user=tBZ57xoAAAAJ&hl=en">Google Scholar Profile</a></li>
+    </div>
+  </section>
+
+  <section class="articles-section">
+    <h2>Journal Articles & Publications</h2>
+    <h3>Graduate Degree</h3>
+    <ol class="article-list">
+      <li>
+        <strong><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcb.5c02518">Simulating Curved Lipid Membranes Using Anchored Frozen Patches </a></strong><br>
+        <em>JF Tallman, A Statt, The Journal of Physical Chemistry B, 2025</em> We present a method for simulating curved lipid membranes by anchoring frozen patches of lipids to create arbitrary curvature. This allows us to simulate out-of-equilibrium ensembles with imposed membrane curvature.
+      </li>
+      <li>
+        <strong><a href="https://pubs.acs.org/doi/full/10.1021/acs.macromol.4c01874">Lipid Membrane Leaflets Unzip upon Hybridization with Polymer-Rich Nanodomains </a></strong><br>
+        <em>JF Tallman, N Kambar, C Leal, A Statt, Macromolecules 57 (24), 11688-11696, 2024</em> We use molecular dynamics simulations to predict that large hydrophobic polymers can unzip lipid bilayers, which has implications for drug delivery and the design of hybrid lipid-polymer materials. This result is validated through experimental imaging.
+      </li>
+    </ol>
+    <h3>Undergraduate Degree</h3>
+    <ol class="article-list">
+      <li><strong><a href="https://pubs.acs.org/doi/full/10.1021/acs.chemmater.2c02963">Antibody Functionalization of Ultrasmall Fluorescent Core–Shell Aluminosilicate Nanoparticle Probes for Advanced Intracellular Labeling and Optical Super Resolution MicroscopyArticle link copied!</strong></a><br>
+        <em>Jacob A. Erstling, Nada Naguib, Joshua A. Hinckley, Rachel Lee, Grant B. Feuer, James F. Tallman, Lieihn Tsaur, Danni Tang, Ulrich B. Wiesner, Chemistry of Materials</em></li>
+    <li><strong><a href="https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202305937">Antibody Functionalization of Ultrasmall Fluorescent Core–Shell Aluminosilicate Nanoparticle Probes for Advanced Intracellular Labeling and Optical Super Resolution Microscopy</strong></a><br>
+        <em>Jacob A Erstling, Nirmalya Bag, Thomas C Gardinier, Ferdinand FE Kohle, Naedum DomNwachukwu, Scott D Butler, Teresa Kao, Kai Ma, Melik Z Turker, Grant B Feuer, Rachel Lee, Nada Naguib, James F Tallman, Henry F Malarkey, Lieihn Tsaur, William L Moore, Dana V Chapman, Tangi Aubert, Saurabh Mehta, Richard A Cerione, Robert S Weiss, Barbara A Baird, Ulrich B Wiesner, Advanced Materials</em></li>
+        <li><strong><a href="https://pubs.acs.org/doi/full/10.1021/acsbiomaterials.5c01199">Enhanced Intracellular Delivery via Photochemical Internalization of Ultrasmall Fluorescent Core–Shell Aluminosilicate Nanoparticles</strong></a><br><em>Nada Naguib, Jacob A. Erstling, James F. Tallman, and Ulrich B. Wiesner. ACS Biomaterials Science and Engineering.</em>
+       
+  </section>
+
+  <section class="teaching-section">
+    <h2>Teaching</h2>
+
+    </section>
+
+    <section class="mentorship-outreach-section">
+    <h2>Mentorship & Outreach</h2>
+    </section>
+
+
+  <section class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-container" id="gallery">
+      {% for file in site.static_files %}
+        {% if file.path contains '/images/' %}
+          {% assign ext = file.extname | downcase %}
+          {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.gif' %}
+            <img src="{{ site.baseurl }}{{ file.path }}" class="gallery-img" alt="Gallery Image">
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+      <button onclick="scrollGallery(-315)">&#8592; Scroll Left</button>
+      <button onclick="scrollGallery(315)">Scroll Right &#8594;</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  function scrollGallery(amount) {
+    const gallery = document.getElementById('gallery');
+    gallery.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  }
+</script>
