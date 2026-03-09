@@ -105,14 +105,25 @@ title: Pre-Wet Phase Workbook
 
 
     <h1>Cooke Deserno - Kremer Grest Model</h1>
+    <p>
+    Simulations are performed with a hybrid Cooke-Deserno and Kremer-Grest type model. The Cooke-Deserno lipid model is an implicit solvent lipid model recently updated to prevent flip-flop [<a href="https://pubs.acs.org/doi/full/10.1021/acs.jctc.0c00862">Foley & Deserno (2020)</a>] and also to simulate ternary mixtures of lipids [<a href="https://pubs.aip.org/aip/jcp/article/161/11/114103/3312653/Raft-like-lipid-mixtures-in-the-highly-coarse">Varma, Kuhri-Makdisi, Deserno</a>]. The Kremer-Grest model is an implicit solvent polymer chain model which uses similar repulsive leonard jones interactions and FENE type bonds to capture the essential physics of polymer chains [<a href="https://pubs.aip.org/aip/jcp/article/92/8/5057/220968/Dynamics-of-entangled-linear-polymer-melts-A">Kremer & Grest (1990)</a>]. To study the pre-wet phase, we are effectively interested in the interface between a 2D membrane and a 3D polymer solution. The main advantage to implicit solvent, off-lattice molecular dynamics simulation (as opposed to MC simulations or more fine-grained models) is that curvature and lipid asymmetry, which involve a treatment of the membrane in 3-dimensions, is explicitly modeled without a tremendous increase in computational complexity. </p>
+
+
+    
     
     <h2>Kremer Grest Model Validation</h2>
-    <p>...</p>
-
-    <h2>Cooke Deserno Model Validation</h2>
     <p></p>
 
+    <h2>Cooke Deserno Model Validation</h2>
+    <h3> Area per Lipid and Gel Phase of CD Lipid</h3>
+    <p>As the good computational scientists that we are, we validate the implementation of the CD model against published data. The first set of validation matches that of Fig. 3a in [<a href="https://pubs.aip.org/aip/jcp/article/161/11/114103/3312653/Raft-like-lipid-mixtures-in-the-highly-coarse">Varma, Kuhri-Makdisi, Deserno</a>]. We simulate 200 lipids (100 per leaflet) for 500,000 timesteps at arying $k_{bend}$ values and constant kT (1.4 $\epsilon$), constant $w_c$ (1.6 $\sigma$) and all other standard parameters. The area per lipid is measured from the box area over the last 100 frames and averaged.</p>
+    <img src="pre-wet_images/area_per_lipid.png" alt="Area per lipid vs k_bend">
+    <p>Both the limiting cases as well as the point of the gel phase transition (where the area per lipid drops sharply) are captured by our implementation of the CD model.</p>
+    <h3>Binary Systems with Cholesterol</h3>
+    <p> Next, we test the implementation of the binary unsaturated-lipid cholesterol system and the saturated lipid - cholesterol system.</p>
+
     <h2>Simulation Scheme</h2>
+    <p>The implementation of this model is in HOOMD-blue. The non-bonded cosine squared potential used to model the interaction between hydrophobic lipids was implemented by Rusen Argun utilizing the HOOMD add-on package AZ-plugins. Simulations were conducted on the GPU. The runtime of a 2,000 lipid system for 100,000 $\tau$ is approximately 2 hr on a desktop PC with RTX 4090.</p>
     <p>
         BLANK
     </p>
